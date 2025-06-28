@@ -1,0 +1,179 @@
+{% extends "layout.html" %}
+
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<section class="hero-section">
+  <div class="container">
+    <h1>"Give Knowledge. Receive Change."</h1>
+    <p>A platform to buy, sell, or donate old NCERT books — empowering education for all.</p>
+  </div>
+</section>
+
+
+<section class="why-section">
+  <div class="container">
+    <h2>Why Give & Read?</h2>
+    <p class="description">
+      Every year, millions of school books are discarded. <strong>Give & Read</strong> is a community-driven platform to connect book donors and seekers — reducing waste and promoting literacy.
+    </p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-book-open"></i></div>
+          <h5>Affordable Learning</h5>
+          <p>Students can access books at little to no cost, helping reduce financial burden.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-recycle"></i></div>
+          <h5>Book Recycling</h5>
+          <p>Old books find new lives instead of ending up in trash or gathering dust.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h5>Community Upliftment</h5>
+          <p>Empowers local communities to support education and sustainability together.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="how-it-works">
+  <div class="container">
+    <h2>How It Works?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-upload"></i></div>
+          <h5>List your book</h5>
+          <p>Upload book details in seconds and make them available to others.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-user-friends"></i></div>
+          <h5>Connect with others</h5>
+          <p>Browse books or contact owners nearby easily and safely.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="fas fa-handshake"></i></div>
+          <h5>Exchange / Donate</h5>
+          <p>Meet locally to exchange or donate books — simple and direct.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="stats-section">
+  <div class="container">
+    <h2 class="stats-title">Our Impact</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fas fa-book"></i></div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Books Listed</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Students Helped</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fas fa-city"></i></div>
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Cities Reached</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+<section>
+
+    <div>
+      <h2>About <span>Us</span></h2>
+      <div class="rows">
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/children.jpeg') }}">
+
+
+        </div>
+
+
+        <div class="content">
+          Give & Read is an online platform designed to make NCERT books accessible to students who need them while
+          reducing
+          book waste. Many students struggle to afford new books every year, while others have old textbooks sitting
+          unused
+          at
+          home. Give & Read bridges this gap by providing a space where people can donate, sell, or exchange their NCERT
+          books. By giving these books a second life, we not only help students save money but also contribute to a more
+          sustainable and eco-friendly way of learning.
+        </div>
+      </div>
+
+      <div class="rows">
+        <div class="content">
+          Give & Read is an online platform designed to make NCERT books accessible to students who need them while
+          reducing
+          book waste. Many students struggle to afford new books every year, while others have old textbooks sitting
+          unused
+          at
+          home. Give & Read bridges this gap by providing a space where people can donate, sell, or exchange their NCERT
+          books. By giving these books a second life, we not only help students save money but also contribute to a more
+          sustainable and eco-friendly way of learning.
+        </div>
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/children.jpeg') }}">
+        </div>
+      </div>
+
+      <div class="rows">
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/children.jpeg') }}">
+        </div>
+
+        <div class="content">
+          Give & Read is an online platform designed to make NCERT books accessible to students who need them while
+          reducing
+          book waste. Many students struggle to afford new books every year, while others have old textbooks sitting
+          unused
+          at
+          home. Give & Read bridges this gap by providing a space where people can donate, sell, or exchange their NCERT
+          books. By giving these books a second life, we not only help students save money but also contribute to a more
+          sustainable and eco-friendly way of learning.
+        </div>
+      </div>
+    </div> 
+    
+
+  </section>
+-->
+
+
+{% endblock %}

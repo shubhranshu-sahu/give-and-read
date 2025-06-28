@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+    <div style="border-radius: 10px; height: fit-content; width: 900px; border: solid black 3px; margin: auto ; padding: 20px; margin-top: 90px;" >
+
+        <h1 class="text-center">
+            - Message Us -
+        </h1>
+
+        <form action="/contact" method="POST">
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+
+
+            <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" >
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+            <label for="msg" class="form-label">Message</label>
+            <textarea class="form-control" id="msg" rows="3" name="msg"></textarea>
+
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <h1>Submitted Messages : </h1>
+        {% if data %}
+            <ul>
+            {% for row in data %}
+                <li>
+                    <strong>Name:</strong> {{ row.name }} <br>
+                    <strong>Email:</strong> {{ row.email }} <br>
+                    <strong>Message:</strong> {{ row.message }}
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data found.</p>
+        {% endif %}
+    </div>
+
+{% endblock%}
