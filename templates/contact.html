@@ -44,15 +44,19 @@
     <div>
         <h1>Submitted Messages : </h1>
         {% if data %}
-            <ul>
+            <ol>
             {% for row in data %}
-                <li>
-                    <strong>Name:</strong> {{ row.name }} <br>
-                    <strong>Email:</strong> {{ row.email }} <br>
-                    <strong>Message:</strong> {{ row.message }}
-                </li>
+            <li>
+
+                <ul>
+                    <li><strong>Name:</strong> {{ row.name }}</li> 
+                    <li><strong>Email:</strong> {{ row.email }} </li>
+                    <li><strong>Message:</strong> {{ row.message }}</li>
+                    <br>
+                </ul>
+            </li>
             {% endfor %}
-            </ul>
+            </ol>
         {% else %}
             <p>No data found.</p>
         {% endif %}
