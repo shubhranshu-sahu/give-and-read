@@ -1,0 +1,50 @@
+body{
+    background-color: rgba(128, 218, 161, 0.2);
+}
+
+h2{
+    margin: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+span{
+    color:#1c4cac;
+}
+ #photos{
+    width: 200px;        /* You can adjust size */
+    height: 200px;
+    border-radius: 50%;  /* This makes it a circle */
+    object-fit: cover;   /* Ensures image fits well inside the circle */
+    border: 2px solid #fff; /* Optional border */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional shadow */
+}
+
+.rows{
+    display: flex;
+    align-items: center;
+    border: 2px solid #1c4cac;
+    gap: 5rem;
+    padding: 20px;
+    border-radius: 10px;
+    margin:20px;
+    box-shadow: 0 .5rem 1rem rgba(21, 4, 108, 0.3);
+    background-color: white;
+}
+
+.content{
+    font-size: 20px;
+    justify-content: center;
+}
+img{
+    border-radius: 2%;
+    box-shadow: 0 .5rem 1rem rgba(21, 4, 108, 0.2);
+}
+
+@media  (max-width: 700px) {
+    .rows{
+        flex-direction: column;
+    }
+  } 

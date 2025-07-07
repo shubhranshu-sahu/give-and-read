@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+
+    <div>
+      <h2>About <span>Me</span></h2>
+      <div class="rows">
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/mypfp.jpg') }}">
+
+
+        </div>
+
+
+        <div class="content">
+          <p>
+            Hello! I'm Shubhranshu Sahu, a passionate B.Tech student with a strong interest in web development, AI/ML, and building tech-driven solutions for real-world problems. I enjoy working on impactful projects — one of which is <strong>"Give & Read"</strong>, a platform that helps students access affordable educational resources.
+          </p>
+          <p>
+            Currently, I’m exploring data-driven approaches to solve environmental issues, including AI-based models to estimate air pollution using satellite data. I’m also learning how to build full-stack web applications using Flask, MySQL, Firebase, and React.
+          </p>
+          <p>
+            I'm always open to learning new technologies and collaborating on meaningful projects. Let's connect and create something valuable!
+          </p>
+        
+        </div>
+      </div>
+
+      <!-- <div class="rows">
+        <div class="content">
+          Give & Read is an online platform designed to make NCERT books accessible to students who need them while
+          reducing
+          book waste. Many students struggle to afford new books every year, while others have old textbooks sitting
+          unused
+          at
+          home. Give & Read bridges this gap by providing a space where people can donate, sell, or exchange their NCERT
+          books. By giving these books a second life, we not only help students save money but also contribute to a more
+          sustainable and eco-friendly way of learning.
+        </div>
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/children.jpeg') }}">
+        </div>
+      </div>
+
+      <div class="rows">
+        <div>
+          <img id="photos" src="{{ url_for('static', filename='assets/children.jpeg') }}">
+        </div>
+
+        <div class="content">
+          Give & Read is an online platform designed to make NCERT books accessible to students who need them while
+          reducing
+          book waste. Many students struggle to afford new books every year, while others have old textbooks sitting
+          unused
+          at
+          home. Give & Read bridges this gap by providing a space where people can donate, sell, or exchange their NCERT
+          books. By giving these books a second life, we not only help students save money but also contribute to a more
+          sustainable and eco-friendly way of learning.
+        </div>
+      </div>
+    </div> -->
+
+   
+
+  </section>
+
+
+{% endblock %}

@@ -1,0 +1,118 @@
+.navvv{
+    background-color:  #0a1f44!important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+
+}
+
+.subnavvv{
+    background-color: #A6E1FA !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4);
+
+}
+
+#hhh{
+
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+
+}
+
+
+.ll{
+    background-color: wheat;
+    padding: 0.3rem 0.7rem;
+    border: solid black 2px !important;
+    border-radius: 15px;
+}
+
+.ll:hover{
+    box-shadow: #001c55 2px 2px 2px;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 5rem;
+}
+
+
+
+.navvv-text {
+    font-size: 1.2rem;
+    color: white !important;
+    
+}
+
+
+
+.login{
+    background-color: rgb(126, 238, 13) !important;
+    border-radius: 5px ;
+}
+
+.profile{
+    color: black !important;   
+    background-color: wheat;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+   /**Footer**/
+
+   .footer-con{
+    background-color: #022d81; 
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    height: 6rem;
+    width: 100%;
+    margin-top:5rem;
+}
+
+.footer-con p{
+    margin: 0px;
+}
+
+.contact
+{
+    height: 10rem;
+    width: 100%;
+    color: white;
+    background-color: #001c55;
+    /*display: flex;*/
+    text-align: center;
+    /*align-content: center;*/
+    padding-top: 10px;
+    gap: 10px;
+}
+
+.contect a{
+    color: white;
+}
+
+.contact-icon a {
+    font-size: 1.5rem;    /* makes icons bigger */
+    margin-right: 12px;   /* adds space between icons */
+    color: inherit;       /* keeps icon color same as text color, customize as needed */
+    text-decoration: none; /* remove underline */
+  }
+  
+  .contact-icon a:last-child {
+    margin-right: 0;      /* no margin after last icon */
+  }
+  
+  /* Optional: add hover effect */
+  .contact-icon a:hover {
+    color: #0077b5;       /* example hover color (LinkedIn blue), change as you want */
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+  }
+  

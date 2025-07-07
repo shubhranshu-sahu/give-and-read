@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+    <div style="border-radius: 10px; height: fit-content; width: 900px; border: solid black 3px; margin: auto ; padding: 20px; margin-top: 90px; box-shadow: 5px 5px 10px black; " >
+
+        <h1 class="text-center">
+            - Message Us -
+        </h1>
+
+        <form action="{{url_for('main.contact')}}" method="POST">
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+
+            <div class="mb-3">
+            <label for="email" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="email" name="email"  required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+            <label for="msg" class="form-label">Message</label>
+            <textarea class="form-control" id="msg" rows="3" name="msg" required></textarea>
+
+            </div>
+
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    {% if data %}
+<div class="container mt-5">
+  <h4>All Contact Submissions</h4>
+  <table class="table table-bordered table-hover table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ entry.name }}</td>
+        <td>{{ entry.email }}</td>
+        <td>{{ entry.message }}</td>
+        <td>{{ entry.date.strftime('%Y-%m-%d %H:%M') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endif %}
+
+{% endblock%}

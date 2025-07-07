@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}       
+
+<!-- Add Button -->
+
+
+
+<div class="d-flex justify-content-center mt-5">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal">
+      Add Book
+    </button>
+  </div>
+  
+<!-- Modal -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form  action="{{ url_for('sell.sell') }}" class="modal-content" method="POST" enctype="multipart/form-data">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addBookModalLabel">Add New Book</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <input name="title" class="form-control mb-2" placeholder="Book Name" required>
+                <input name="price" type="number" class="form-control mb-2" placeholder="Price" required>
+                <input name="year" type="number" class="form-control mb-2" placeholder="Published Year" required>
+                <input name="book_class" class="form-control mb-2" placeholder="Class" required>
+                <input name="image" type="file" accept="image/*" class="form-control" required>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+      {% for book in books %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{{ url_for('static', filename='uploads/' + book.image) }}" class="card-img-top" alt="book image">
+            <div class="card-body">
+              <h5 class="card-title">{{ book.title }}</h5>
+              <p class="card-text">₹{{ book.price }}</p>
+              <p class="card-text">Class: {{ book.book_class }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  
+  <script>
+    // When the modal is hidden (closed), reset the form
+    const addBookModal = document.getElementById('addBookModal');
+    addBookModal.addEventListener('hidden.bs.modal', function () {
+      // Reset the form inside the modal
+      addBookModal.querySelector('form').reset();
+    });
+  </script>
+    
+{% endblock %}

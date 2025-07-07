@@ -1,0 +1,15 @@
+{
+    "params":{
+        "uri":"mysql+pymysql://root:1234@localhost/give_read"
+    },
+
+    "social": {
+        "facebook" : "https://www.facebook.com/",
+        "instagram":"https://www.instagram.com/shubhranshusahu3/",
+        "twitter":"https://x.com/ShubhranshuSa17",
+        "linkedin": "https://www.linkedin.com/in/shubhranshu-sahu/",
+        "github" : "https://github.com/shubhranshu-sahu",
+        "telegram":"https://t.me/Shinchan_x_Nohara"
+    }
+
+}

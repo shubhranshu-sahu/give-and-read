@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="{{ url_for('static', filename='assets/title icon.jpg') }}"  >
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+
+  {% block links %}       {% endblock %}
+
+
+
+  <title>Gvie-and-Read</title>
+
+</head>
+
+<body>
+  <header id="hhh">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary navvv">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='assets/nav logo.png') }}" width="80rem" alt=""></a>
+        <a class="navbar-brand pb-3" href="#"><span class="fs-2 fw-semibold navvv-text"> Give & Read</span></a>
+        <button style="background-color: white; border: solid greenyellow;" class=" navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class=" navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li class="nav-item ">
+              <a class=" navvv-text nav-link active " aria-current="page" href="{{url_for('main.index')}}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="navvv-text nav-link" href="{{url_for('main.about')}}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="navvv-text nav-link" href="{{url_for('main.contact')}}">Contact</a>
+            </li>
+
+        
+
+            <li class="nav-item dropdown">
+              {% if session.get('user_id') %}
+              <a class="nav-link dropdown-toggle navvv-text profile" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ session['username'] }}
+              </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="{{url_for('profile.profile')}}">My Profile</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('auth.logout') }}">Log Out</a></li>
+                </ul>
+              {% else %}
+                <a class="nav-link navvv-text login" href="{{ url_for('auth.login') }}">Login</a>
+              {% endif %}
+            </li>
+            
+            
+
+
+            <!-- <li class="nav-item profile" id="profile">
+              <div>
+                <a class="navvv-text nav-link " href="#">Profile / log-out</a>
+              </div>
+            </li> -->
+
+          </ul>
+
+        </div>
+      </div>
+
+
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary subnavvv">
+      <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0 test ">
+
+            <li class="nav-item ll">
+              <a class="nav-link fs-5 fw-bolder  " href="{{url_for('sell.buy')}}">Buy a Book</a>
+            </li>
+            <li class="nav-item ll">
+              <a class="nav-link fs-5 fw-bolder " href="{{url_for('sell.sell')}}">Sell a Book</a>
+            </li>
+            <li class="nav-item ll">
+              <a class="nav-link fs-5 fw-bolder" href="#">Donate a book</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  
+
+  {% block content %}       {% endblock %}
+
+
+  <footer>
+    <div>
+
+    </div>
+    <div class="footer-con">
+      <p>Quality Education : A key to a better future</p>
+      <h5>THANKYOU! for visiting our website</h5>
+    </div>
+    <div class="contact">
+      <h4>Contact Us :</h4> 
+      <div class="contact-icon">
+        <a href="{{ social_links.linkedin }}" target="_blank" ><i class="fa-brands fa-linkedin" ></i></a>
+        <a href="{{ social_links.github }}" target="_blank" ><i class="fa-brands fa-github"></i></a>
+        <a href="{{ social_links.instagram }} " target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="{{ social_links.telegram }}"  target="_blank" ><i class="fa-brands fa-telegram"></i></a>
+        <a href="{{ social_links.twitter }}" target="_blank" ><i class="fa-brands fa-twitter"></i></a>
+        <a href="{{ social_links.facebook }}"  target="_blank" ><i class="fa-brands fa-facebook"></i></a>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script type="module" src="{{ url_for('static', filename='js/layout.js') }}"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

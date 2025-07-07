@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}    
+
+<div class="container mt-5">
+  <div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-header text-center">
+      <h4>{{ user.username }}'s Profile</h4>
+    </div>
+    <div class="card-body">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Gender:</strong> {{ user.gender }}</p>
+      <p><strong>Age:</strong> {{ user.age }}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
